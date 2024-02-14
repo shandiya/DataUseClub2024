@@ -1,0 +1,33 @@
+---
+pagetitle: "Data Use Club"
+format:
+  revealjs: 
+    theme: custom-theme.scss
+    height: 900
+    width: 1600
+    highlight-style: a11y
+    code-line-numbers: false
+    code-copy: hover
+    menu: false
+editor: visual
+---
+
+##  {#title data-menu-title="Title"}
+
+![](images/opuntia.png){.absolute top=120 left=200 width="650"}
+![](images/logos.png){.absolute bottom=100 right=180 height="90"}
+[Biosecurity Alerts]{.title} [GBIF Data Use Club Seminar 2024]{.subtitle} [Callum Waite <br> Erin Roger <br> Shandiya Balasubramaniam]{.authors} 
+
+##  {#acknowledgement data-menu-title="Acknowledgement" background-color="#d4e8eb"}
+
+```{r}
+source("R/map.R")
+m
+```
+
+![](images/people.png){.absolute top=60 left=1050 width="500"}
+
+[We acknowledge the Traditional Owners of the lands on which we live and work, and pay our respects to Elders past and present. We recognise the spiritual and cultural significance of land, water, and all that is in the environment to Traditional Owners, and their continuing connection to Country.]{.acknowledgement}
+
+
+

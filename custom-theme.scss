@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600&display=swap');
+
+
+// fonts
+$font-family-monospace: 'Fira Code', monospace;
+$font-family: 'League Spartan', sans-serif;
+$font-family: 'Fjalla One', sans-serif;
+$code-block-font-size: 0.6em;
+
+// colours
+$body-bg: #fffbf0;
+$body-color: #273b50;
+$link-color: #7E98A8;
+$code-block-bg: $body-bg;
+$code-block-border-color: $body-bg;
+$tabset-border-color: $body-color;
+
+
+/*-- scss:rules --*/
+
+.reveal .title {
+  font-family: 'Fjalla One', sans-serif;
+  color: #273b50;
+  font-size: 3em;
+  position: absolute;
+  top: 220px;
+  right: 180px;
+}
+
+.reveal .subtitle {
+  font-family: 'League Spartan', sans-serif;
+  color: #273b50;
+  font-size: 1em;
+  font-weight: 200;
+  position: absolute;
+  top: 380px;
+  right: 180px;
+}
+
+.reveal .authors {
+  font-family: 'League Spartan', sans-serif;
+  color: #273b50;
+  font-size: 1.2em;
+  font-weight: 200;
+  position: absolute;
+  top: 480px;
+  right: 180px;
+  text-align: right;
+}
+
+.reveal .acknowledgement {
+  font-family: 'League Spartan', sans-serif;
+  color: #273b50;
+  font-weight: 100;
+  font-style: italic;
+  position: absolute;
+  bottom: 90px;
+  left: 1050px;
+  right: 20px;
+}

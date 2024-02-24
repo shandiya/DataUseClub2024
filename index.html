@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -344,18 +409,305 @@
 <h2></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-1a147bbdab46866f433f" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-1a147bbdab46866f433f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.VoyagerNoLabels",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-34.9,-33.8,-37.8],[138.6,151.2,144.9],10,null,null,{"interactive":true,"className":"","stroke":false,"color":"#273b50","weight":5,"opacity":0.5,"fill":true,"fillColor":"#273b50","fillOpacity":0.7},null,null,["Kaurna","Gadigal, Eora Nation","Wurundjeri, Kulin Nation"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"fitBounds":[-43.6320265,105.550652,-9.229286999999999,167.996851,[]],"limits":{"lat":[-37.8,-33.8],"lng":[138.6,151.2]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x) { $(el).css({width: '1000px', height: '900px'}); }).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-b3f8da7d2ab93c0730a2" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-b3f8da7d2ab93c0730a2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.VoyagerNoLabels",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-34.9,-33.8,-37.8],[138.6,151.2,144.9],10,null,null,{"interactive":true,"className":"","stroke":false,"color":"#273b50","weight":5,"opacity":0.5,"fill":true,"fillColor":"#273b50","fillOpacity":0.7},null,null,["Kaurna","Gadigal, Eora Nation","Wurundjeri, Kulin Nation"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"fitBounds":[-43.6320265,105.550652,-9.229286999999999,167.996851,[]],"limits":{"lat":[-37.8,-33.8],"lng":[138.6,151.2]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x) { $(el).css({width: '1000px', height: '900px'}); }).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
 </div>
 </div>
 <p><img data-src="images/people.png" class="absolute" style="top: 60px; left: 1050px; width: 500px; "></p>
 <p><span class="acknowledgement">We acknowledge the Traditional Owners of the lands on which we live and work, and pay our respects to Elders past and present. We recognise the spiritual and cultural significance of land, water, and all that is in the environment to Traditional Owners, and their continuing connection to Country.</span></p>
 </section>
-<section id="alien-species" class="slide level2" data-menu-title="Alien Species">
-<h2>Brief history of alien species in Australia</h2>
-<p><img data-src="images/dingo.png" class="absolute" style="bottom: 10px; right: 20px; width: 1050px; "></p>
-<p>5,000-10,000 ya<br>
-Dingo (<em>Canis familiaris ssp. Dingo</em>)</p>
+<section id="koel" class="slide level2" data-menu-title="{koel}">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/koel.png" height="550"></p>
+</div><div class="column" style="width:45%;">
+<p><span class="code">{koel}</span> facilitates the process of searching for taxa within spatial and temporal constraints, summarising this information in a table, and sending the table as an email</p>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="koel-galah" class="slide level2" data-menu-title="{koel} &amp; {galah}">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/koel.png" height="550"></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/galah.png" height="550"></p>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="workflow-slide" class="slide level2">
+<h2>workflow slide</h2>
+</section>
+<section id="demo-list-slide" class="slide level2">
+<h2>demo list slide</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tykzhqclxl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  
+  
+<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: Lato, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #273B50; font-size: 19px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" data-bgcolor="#FFFFFF">
+<thead style="border-style: none;">
+<tr class="header gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
+<th id="correct_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">correct_name</th>
+<th id="provided_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">provided_name</th>
+<th id="synonyms" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">synonyms</th>
+<th id="common_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">common_name</th>
+<th id="state" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">state</th>
+<th id="lga" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">lga</th>
+<th id="shape" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col" style="text-align: left; border-style: none; color: #FFFFFF; background-color: #273B50; font-size: 24px; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden;" data-bgcolor="#273B50" data-valign="bottom">shape</th>
+</tr>
+</thead>
+<tbody class="gt_table_body" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
+<tr class="odd" style="border-style: none;">
+<td class="gt_row gt_left" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Parvipsitta porphyrocephala</td>
+<td class="gt_row gt_left" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Parvipsitta porphyrocephala</td>
+<td class="gt_row gt_left" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Glossopsitta porphyrocephala</td>
+<td class="gt_row gt_left" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Purple-Crowned Lorikeet</td>
+<td class="gt_row gt_left" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">AUS</td>
+<td class="gt_row gt_left" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+<td class="gt_row gt_left" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+</tr>
+<tr class="even" style="border-style: none;">
+<td class="gt_row gt_left gt_striped" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Ceyx azureus</td>
+<td class="gt_row gt_left gt_striped" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Ceyx azureus</td>
+<td class="gt_row gt_left gt_striped" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Azure Kingfisher</td>
+<td class="gt_row gt_left gt_striped" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">QLD</td>
+<td class="gt_row gt_left gt_striped" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+</tr>
+<tr class="odd" style="border-style: none;">
+<td class="gt_row gt_left" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Chlamydera nuchalis</td>
+<td class="gt_row gt_left" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Chlamydera nuchalis</td>
+<td class="gt_row gt_left" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+<td class="gt_row gt_left" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Great Bowerbird</td>
+<td class="gt_row gt_left" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">QLD, NT</td>
+<td class="gt_row gt_left" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+<td class="gt_row gt_left" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+</tr>
+<tr class="even" style="border-style: none;">
+<td class="gt_row gt_left gt_striped" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Eudynamys orientalis</td>
+<td class="gt_row gt_left gt_striped" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Eudynamys orientalis</td>
+<td class="gt_row gt_left gt_striped" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Eastern Koel</td>
+<td class="gt_row gt_left gt_striped" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Darwin Municipality</td>
+<td class="gt_row gt_left gt_striped" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+</tr>
+<tr class="odd" style="border-style: none;">
+<td class="gt_row gt_left" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Thalasseus bergii</td>
+<td class="gt_row gt_left" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Thalasseus bergii (Lichtenstein, 1823)</td>
+<td class="gt_row gt_left" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Thalasseus bergii, Sterna bergii</td>
+<td class="gt_row gt_left" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Crested Tern</td>
+<td class="gt_row gt_left" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+<td class="gt_row gt_left" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">City of Marion, City of Holdfast Bay</td>
+<td class="gt_row gt_left" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+</tr>
+<tr class="even" style="border-style: none;">
+<td class="gt_row gt_left gt_striped" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Aviceda (Aviceda) subcristata</td>
+<td class="gt_row gt_left gt_striped" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Aviceda (Aviceda) subcristata</td>
+<td class="gt_row gt_left gt_striped" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Aviceda subcristata</td>
+<td class="gt_row gt_left gt_striped" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">Pacific Baza</td>
+<td class="gt_row gt_left gt_striped" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">NA</td>
+<td class="gt_row gt_left gt_striped" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; background-color: #FFFBF0;" data-valign="middle" data-bgcolor="#FFFBF0">QLD_Protected_areas</td>
+</tr>
+<tr class="odd" style="border-style: none;">
+<td class="gt_row gt_left" headers="correct_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Thalassarche cauta</td>
+<td class="gt_row gt_left" headers="provided_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Thalassarche cauta</td>
+<td class="gt_row gt_left" headers="synonyms" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Diomedea cauta</td>
+<td class="gt_row gt_left" headers="common_name" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Shy Albatross</td>
+<td class="gt_row gt_left" headers="state" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">VIC</td>
+<td class="gt_row gt_left" headers="lga" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">Huon Valley Council</td>
+<td class="gt_row gt_left" headers="shape" style="text-align: left; border-style: none; padding-top: 1.5px; padding-bottom: 1.5px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: rgba(255, 255, 255, 0); border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden;" data-valign="middle">NA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="email-demo" class="slide level2" data-menu-title="Demo email" data-background-iframe="images/email_demo.html" data-background-interactive="true">
+<h2></h2>
+</section>
+<section id="coding-complexities" class="slide level2" data-menu-title="Coding complexities">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<p><span class="slide-title">Complexities <br> in coding</span></p>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">Taxonomic<br>
+</li>
+<li class="fragment">Temporal<br>
+</li>
+<li class="fragment">Spatial<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="taxonomy-01" class="slide level2" data-menu-title="Taxonomy 01">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:30%;">
+<p><span class="slide-title">Taxonomic <br> challenges</span> Cleaning provided taxon names</p>
+</div><div class="column fragment" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a>clean_names <span class="ot">&lt;-</span> <span class="cf">function</span>(name) {</span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a>  cleaned_name <span class="ot">&lt;-</span> name <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">"\u00A0"</span>, <span class="st">" "</span>, .) <span class="sc">|&gt;</span>      <span class="co"># remove non-ASCII whitespaces (NBSP)</span></span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">"\u200B"</span>, <span class="st">" "</span>, .) <span class="sc">|&gt;</span>      <span class="co"># ... (ZWSP)</span></span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>, <span class="st">" "</span>, .) <span class="sc">|&gt;</span>          <span class="co"># replace line breaks with spaces</span></span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">";"</span>, <span class="st">","</span>, .) <span class="sc">|&gt;</span>           <span class="co"># replace semi-colons with commas</span></span>
+<span id="cb1-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">" ,"</span>, <span class="st">","</span>, .) <span class="sc">|&gt;</span>          <span class="co"># remove spaces before commas</span></span>
+<span id="cb1-8"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">s{2,}"</span>, <span class="st">" "</span>, .) <span class="sc">|&gt;</span>     <span class="co"># remove multiple spaces</span></span>
+<span id="cb1-9"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">",$"</span>, <span class="st">""</span>, .) <span class="sc">|&gt;</span>           <span class="co"># remove trailing commas</span></span>
+<span id="cb1-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">" +$"</span>, <span class="st">""</span>, .) <span class="sc">|&gt;</span>          <span class="co"># remove trailing spaces</span></span>
+<span id="cb1-11"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">",(</span><span class="sc">\\</span><span class="st">w)"</span>, <span class="st">", </span><span class="sc">\\</span><span class="st">1"</span>, .) <span class="sc">|&gt;</span>  <span class="co"># add spaces between commas and text</span></span>
+<span id="cb1-12"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">" sp</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">""</span>, .) <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gsub</span>(<span class="st">" spp</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">""</span>, .) <span class="sc">|&gt;</span>      <span class="co"># remove spp. and sp. abbreviations</span></span>
+<span id="cb1-14"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_squish</span>(.)</span>
+<span id="cb1-15"><a href="" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-16"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(cleaned_name)</span>
+<span id="cb1-17"><a href="" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="taxonomy-02" class="slide level2" data-menu-title="Taxonomy 02">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:30%;">
+<p><span class="slide-title">Taxonomic <br> challenges</span> Alerting on different ranks</p>
+</div><div class="column fragment" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>fields <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"genus"</span>, <span class="st">"species"</span>, <span class="st">"subspecies"</span>, <span class="st">"scientificName"</span>)</span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">request_data</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">galah_filter</span>(firstLoadedDate <span class="sc">&gt;=</span> upload_date_start,</span>
+<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a>               firstLoadedDate <span class="sc">&lt;=</span> upload_date_end,</span>
+<span id="cb2-6"><a href="" aria-hidden="true" tabindex="-1"></a>               eventDate <span class="sc">&gt;=</span> event_date_start,</span>
+<span id="cb2-7"><a href="" aria-hidden="true" tabindex="-1"></a>               eventDate <span class="sc">&lt;=</span> event_date_end,</span>
+<span id="cb2-8"><a href="" aria-hidden="true" tabindex="-1"></a>               {{field}} <span class="sc">==</span> search_terms) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">galah_select</span>(scientificName, vernacularName,</span>
+<span id="cb2-10"><a href="" aria-hidden="true" tabindex="-1"></a>               genus, species, subspecies,</span>
+<span id="cb2-11"><a href="" aria-hidden="true" tabindex="-1"></a>               decimalLatitude, decimalLongitude,</span>
+<span id="cb2-12"><a href="" aria-hidden="true" tabindex="-1"></a>               cl22, cl10923, cl1048, cl966, cl21,</span>
+<span id="cb2-13"><a href="" aria-hidden="true" tabindex="-1"></a>               firstLoadedDate, basisOfRecord,</span>
+<span id="cb2-14"><a href="" aria-hidden="true" tabindex="-1"></a>               <span class="at">group =</span> <span class="fu">c</span>(<span class="st">"basic"</span>, <span class="st">"media"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">match =</span> field,</span>
+<span id="cb2-17"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="at">search_term =</span> .data[[field]],</span>
+<span id="cb2-18"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="fu">across</span>(<span class="sc">-</span><span class="fu">c</span>(images, sounds, videos), as.character),</span>
+<span id="cb2-19"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="fu">across</span>(<span class="fu">c</span>(images, sounds, videos), as.list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="temporal" class="slide level2" data-menu-title="Temporal">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:30%;">
+<p><span class="slide-title">Temporal <br> challenges</span></p>
+</div><div class="column fragment" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">request_data</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">galah_filter</span>(firstLoadedDate <span class="sc">&gt;=</span> upload_date_start,</span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>               firstLoadedDate <span class="sc">&lt;=</span> upload_date_end,</span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>               eventDate <span class="sc">&gt;=</span> event_date_start,</span>
+<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>               eventDate <span class="sc">&lt;=</span> event_date_end,</span>
+<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>               {{field}} <span class="sc">==</span> search_terms) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">galah_select</span>(scientificName, vernacularName,</span>
+<span id="cb3-8"><a href="" aria-hidden="true" tabindex="-1"></a>               genus, species, subspecies,</span>
+<span id="cb3-9"><a href="" aria-hidden="true" tabindex="-1"></a>               decimalLatitude, decimalLongitude,</span>
+<span id="cb3-10"><a href="" aria-hidden="true" tabindex="-1"></a>               cl22, cl10923, cl1048, cl966, cl21,</span>
+<span id="cb3-11"><a href="" aria-hidden="true" tabindex="-1"></a>               firstLoadedDate, basisOfRecord,</span>
+<span id="cb3-12"><a href="" aria-hidden="true" tabindex="-1"></a>               <span class="at">group =</span> <span class="fu">c</span>(<span class="st">"basic"</span>, <span class="st">"media"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-13"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-14"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">match =</span> field,</span>
+<span id="cb3-15"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="at">search_term =</span> .data[[field]],</span>
+<span id="cb3-16"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="fu">across</span>(<span class="sc">-</span><span class="fu">c</span>(images, sounds, videos), as.character),</span>
+<span id="cb3-17"><a href="" aria-hidden="true" tabindex="-1"></a>         <span class="fu">across</span>(<span class="fu">c</span>(images, sounds, videos), as.list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="spatial" class="slide level2" data-menu-title="Spatial">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:30%;">
+<p><span class="slide-title">Spatial <br> challenges</span></p>
+</div>
+</div>
+</section>
+<section id="slides-on-broader-learnings" class="slide level2">
+<h2>Slide(s) on broader learnings</h2>
+</section>
+<section id="results" class="slide level2" data-menu-title="Results">
+<h2></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><span class="slide-title">Results <br> (12 months)</span></p>
+</div><div class="column" style="width:65%;">
+<div>
+<ul>
+<li class="fragment">From 2 lists &amp; 2 users to 35 lists &amp; 54 users</li>
+<li class="fragment">Most users state/territory land management authorities<br>
+</li>
+<li class="fragment">Clearly demonstrated links to management and policy</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
+</section>
+<section id="quote" class="slide level2" data-menu-title="Quote">
+<h2></h2>
+<p><span class="quote">There is no doubt that the biosecurity alert system has improved our statewide surveillance capability [in Queensland]. While we have only been using it for a short period we have already recorded several significant detections. I’ve been promoting the system at every opportunity.</span></p>
+<p><span class="quote-author">- Steve Csurhes, Biosecurity Queensland</span></p>
+<p><span class="quotation-mark">”</span></p>
+<div class="footer">
+<p><a href="https://shandiya.quarto.pub/DataUseClub2024">Slides</a> | <a href="https://github.com/shandiya/DataUseClub2024">Code</a></p>
+</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

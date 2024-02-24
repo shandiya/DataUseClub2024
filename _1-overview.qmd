@@ -1,0 +1,61 @@
+##  {#koel data-menu-title="{koel}"}
+
+::: {.columns .v-center-container}
+::: {.column width="10%"}
+:::
+::: {.column width="35%"}
+![](images/koel.png){height="550"}
+:::
+::: {.column width="45%"}
+[{koel}]{.code} facilitates the process of searching for taxa within spatial and temporal constraints, summarising this information in a table, and sending the table as an email
+:::
+::: {.column width="10%"}
+:::
+:::
+
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+##  {#koel-galah data-menu-title="{koel} & {galah}"}
+
+::: {.columns .v-center-container}
+::: {.column width="10%"}
+:::
+::: {.column width="35%"}
+![](images/koel.png){height="550"}
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="35%"}
+![](images/galah.png){height="550"}
+:::
+::: {.column width="10%"}
+:::
+:::
+
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+## workflow slide
+
+## demo list slide
+
+
+```{r}
+library(gt)
+source("R/functions.R")
+
+readRDS("data/demo_list.rds") |> 
+  gt() |> 
+  gt_theme() |> 
+  tab_options(table.font.size = 19,
+              column_labels.font.size = 24,
+              data_row.padding = 1.5) |> 
+  as_raw_html()
+
+```
+
+
+## {#email-demo data-menu-title="Demo email" background-iframe="images/email_demo.html" background-interactive=true}

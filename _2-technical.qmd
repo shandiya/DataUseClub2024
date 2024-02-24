@@ -1,0 +1,146 @@
+## {#coding-complexities data-menu-title="Coding complexities"}
+
+:::: {.columns .v-center-container}
+::: {.column width="10%"}
+:::
+::: {.column width="40%"}
+[Complexities <br> in coding]{.slide-title}
+:::
+::: {.column width="50%"}
+::: {.incremental}
+- Taxonomic  
+- Temporal  
+- Spatial   
+:::
+:::
+::::
+
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+
+## {#taxonomy-01 data-menu-title="Taxonomy 01"}
+
+:::: {.columns .v-center-container}
+::: {.column width="30%"}
+[Taxonomic <br> challenges]{.slide-title}
+Cleaning provided taxon names  
+:::
+
+::: {.column width="70%" .fragment}
+  
+```{r}
+#| echo: true
+
+clean_names <- function(name) {
+  cleaned_name <- name |>
+    gsub("\u00A0", " ", .) |>      # remove non-ASCII whitespaces (NBSP)
+    gsub("\u200B", " ", .) |>      # ... (ZWSP)
+    gsub("\n", " ", .) |>          # replace line breaks with spaces
+    gsub(";", ",", .) |>           # replace semi-colons with commas
+    gsub(" ,", ",", .) |>          # remove spaces before commas
+    gsub("\\s{2,}", " ", .) |>     # remove multiple spaces
+    gsub(",$", "", .) |>           # remove trailing commas
+    gsub(" +$", "", .) |>          # remove trailing spaces
+    gsub(",(\\w)", ", \\1", .) |>  # add spaces between commas and text
+    gsub(" sp\\.", "", .) |>
+    gsub(" spp\\.", "", .) |>      # remove spp. and sp. abbreviations
+    str_squish(.)
+  
+  return(cleaned_name)
+}
+```
+:::
+::::
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+
+## {#taxonomy-02 data-menu-title="Taxonomy 02"}
+
+:::: {.columns .v-center-container}
+::: {.column width="30%"}
+[Taxonomic <br> challenges]{.slide-title}
+Alerting on different ranks
+:::
+::: {.column width="70%" .fragment}
+
+```{r}
+#| echo: true
+#| eval: false
+
+fields <- c("genus", "species", "subspecies", "scientificName")
+
+request_data() |>
+  galah_filter(firstLoadedDate >= upload_date_start,
+               firstLoadedDate <= upload_date_end,
+               eventDate >= event_date_start,
+               eventDate <= event_date_end,
+               {{field}} == search_terms) |>
+  galah_select(scientificName, vernacularName,
+               genus, species, subspecies,
+               decimalLatitude, decimalLongitude,
+               cl22, cl10923, cl1048, cl966, cl21,
+               firstLoadedDate, basisOfRecord,
+               group = c("basic", "media")) |>
+  collect() |>
+  mutate(match = field,
+         search_term = .data[[field]],
+         across(-c(images, sounds, videos), as.character),
+         across(c(images, sounds, videos), as.list))
+```
+
+:::
+::::
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+
+## {#temporal data-menu-title="Temporal"}
+
+:::: {.columns .v-center-container}
+::: {.column width="30%"}
+[Temporal <br> challenges]{.slide-title}
+:::
+::: {.column width="70%" .fragment}
+
+```{r}
+#| echo: true
+#| eval: false
+
+request_data() |>
+  galah_filter(firstLoadedDate >= upload_date_start,
+               firstLoadedDate <= upload_date_end,
+               eventDate >= event_date_start,
+               eventDate <= event_date_end,
+               {{field}} == search_terms) |>
+  galah_select(scientificName, vernacularName,
+               genus, species, subspecies,
+               decimalLatitude, decimalLongitude,
+               cl22, cl10923, cl1048, cl966, cl21,
+               firstLoadedDate, basisOfRecord,
+               group = c("basic", "media")) |>
+  collect() |>
+  mutate(match = field,
+         search_term = .data[[field]],
+         across(-c(images, sounds, videos), as.character),
+         across(c(images, sounds, videos), as.list))
+```
+:::
+::::
+::: footer
+[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
+:::
+
+## {#spatial data-menu-title="Spatial"}
+
+:::: {.columns .v-center-container}
+::: {.column width="30%"}
+[Spatial <br> challenges]{.slide-title}
+:::
+::::
+
+## Slide(s) on broader learnings

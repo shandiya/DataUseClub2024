@@ -24,7 +24,6 @@ $tabset-border-color: $body-color;
 
 .reveal .title {
   font-family: 'Fjalla One', sans-serif;
-  color: #273b50;
   font-size: 3em;
   position: absolute;
   top: 220px;
@@ -33,7 +32,6 @@ $tabset-border-color: $body-color;
 
 .reveal .subtitle {
   font-family: 'League Spartan', sans-serif;
-  color: #273b50;
   font-size: 1em;
   font-weight: 200;
   position: absolute;
@@ -43,7 +41,6 @@ $tabset-border-color: $body-color;
 
 .reveal .authors {
   font-family: 'League Spartan', sans-serif;
-  color: #273b50;
   font-size: 1.2em;
   font-weight: 200;
   position: absolute;
@@ -54,7 +51,6 @@ $tabset-border-color: $body-color;
 
 .reveal .acknowledgement {
   font-family: 'League Spartan', sans-serif;
-  color: #273b50;
   font-weight: 100;
   font-style: italic;
   position: absolute;
@@ -63,8 +59,60 @@ $tabset-border-color: $body-color;
   right: 20px;
 }
 
+.reveal .slide-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.2em;
+}
+
+.v-center-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
 .reveal h2, p {
   font-family: 'League Spartan', sans-serif;
-  color: #273b50;
   font-weight: 200;
+}
+
+
+.reveal ul {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+.reveal .code {
+  font-family: 'Fira Code', monospace;
+  font-weight: 200;
+}
+
+.reveal .quote {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  position: absolute;
+  left: 300px;
+  right: 100px;
+  top: 180px;
+}
+
+.reveal .quote-author {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
+  position: absolute;
+  left: 300px;
+  right: 80px;
+  top: 530px;
+}
+
+.reveal .quotation-mark {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 8em;
+  position: absolute;
+  left: 20px;
+  top: 300px;
 }

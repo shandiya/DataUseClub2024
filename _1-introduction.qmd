@@ -1,10 +1,10 @@
 ## The Atlas of Living Australia (ALA)
 
 :::: {.columns .v-center-container}
-::: {.column width="70%"}
+::: {.column width="75%"}
 ![](images/ala-home.png)
 :::
-::: {.column width="30%"} 
+::: {.column width="25%"} 
 [• One of several facilities funded by the Aus government for **national research infrastructure** <br><br> • Over 850 data providers & weekly ingest of datasets <br><br> • Citizen science is our fastest growing data source]{.ul-sml}
 :::
 ::::
@@ -19,7 +19,7 @@
 
 [© Michael Hains (CC) BY-NC]{.caption .absolute bottom=10 left=20}  
 
-:::: {.columns .v-center-container}
+:::: {.columns}
 ::: {.column width="78%"}
 ![](images/dingo.png)
 :::
@@ -31,25 +31,35 @@
 
 ## Colonisation of Australia: 1788-1800 {#colonisation data-menu-title="Colonisation"}
 
+:::: {.columns .v-center-container}
+::: {.column width="100%"}
+![](images/colonisation.png){width="1550"}
+:::
+::::
+
+
 ## Expansion & acclimatisation: 1800's {#expansion data-menu-title="Expansion"}
+![](images/expansion.png){fig-align="center"}  
+
 
 ## Trade & globalisation: 1900-today {#globalisation data-menu-title="Globalisation"}
-![](images/acc-pests.jpeg)
+![](images/globalisation.png){fig-align="center"}
 
-## Invasive species in the ALA {#invasive-ALA data-menu-title = "Invasive ALA"}  
+## Invasive species in the ALA {#invasive-ALA data-menu-title="Invasive ALA"}  
 ALA hosts 2300+ introduced species & 1.9+ million occurrences of pests, weeds, and diseases
 
-
-:::: {.columns .v-center-container}
+:::: {.columns}
 ::: {.column width="50%"}
-![](images/red-eared-slider.png)  
+![](images/slider.jpg)  
 Red eared slider   
-236 occurrences
+236 occurrences  
+[© Laurent Lebois (CC) BY-NC some rights reserved]{.caption .absolute bottom=20 left=0}
 
 :::
 ::: {.column width="50%"} 
 ![](images/lantana.png)  
 Lantana  
 36,729 occurrences  
+[© Andrew Kinsela]{.caption .absolute bottom=20 left=820}
 :::
 ::::

@@ -71,11 +71,14 @@ $tabset-border-color: $body-color;
   height: 90%;
 }
 
-.reveal h2, p {
+.reveal p {
   font-family: 'League Spartan', sans-serif;
   font-weight: 200;
 }
 
+.reveal h2 {
+  font-family: 'Fjalla One', sans-serif;
+}
 
 .reveal ul {
   font-family: 'League Spartan', sans-serif;

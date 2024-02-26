@@ -8,8 +8,7 @@ format:
     highlight-style: a11y
     code-copy: hover
     code-block-height: 650px
-    menu: false
-mmeditor: visual
+editor: visual
 ---
 
 ## {#title data-menu-title="Title" data-hide-slide-number="true"}

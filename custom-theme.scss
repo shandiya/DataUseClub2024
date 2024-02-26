@@ -83,9 +83,22 @@ $tabset-border-color: $body-color;
   font-size: 1.5em;
 }
 
+.reveal ul-sml {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 200;
+  font-size: 1.1em;
+}
+
+
 .reveal .code {
   font-family: 'Fira Code', monospace;
   font-weight: 200;
+}
+
+.reveal .caption {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 100;
+  font-size: 0.6em;
 }
 
 .reveal .quote {

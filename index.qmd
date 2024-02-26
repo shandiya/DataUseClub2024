@@ -6,20 +6,19 @@ format:
     height: 900
     width: 1600
     highlight-style: a11y
-    code-line-numbers: false
     code-copy: hover
     code-block-height: 650px
     menu: false
-editor: visual
+mmeditor: visual
 ---
 
-## {#title data-menu-title="Title"}
+## {#title data-menu-title="Title" data-hide-slide-number="true"}
 
 ![](images/opuntia.png){.absolute top=120 left=200 width="650"}
 ![](images/logos.png){.absolute bottom=100 right=180 height="90"}
 [Biosecurity Alerts]{.title} [GBIF Data Use Club Seminar 2024]{.subtitle} [Callum Waite <br> Erin Roger <br> Shandiya Balasubramaniam]{.authors} 
 
-## {#acknowledgement data-menu-title="Acknowledgement" background-color="#d4e8eb"}
+## {#acknowledgement data-menu-title="Acknowledgement" background-color="#d4e8eb" data-hide-slide-number="true"}
 
 ```{r}
 source("R/map.R")
@@ -30,9 +29,11 @@ m
 
 [We acknowledge the Traditional Owners of the lands on which we live and work, and pay our respects to Elders past and present. We recognise the spiritual and cultural significance of land, water, and all that is in the environment to Traditional Owners, and their continuing connection to Country.]{.acknowledgement}
 
-{{< include _1-overview.qmd >}}
+{{< include _1-introduction.qmd >}}
 
-{{< include _2-technical.qmd >}}
+{{< include _2-overview.qmd >}}
+
+{{< include _3-technical.qmd >}}
 
 
 ## {#results data-menu-title="Results"}

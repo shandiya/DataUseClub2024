@@ -7,31 +7,26 @@
 [Complexities <br> in coding]{.slide-title}
 :::
 ::: {.column width="50%"}
-::: {.incremental}
 - Taxonomic  
 - Temporal  
 - Spatial   
 :::
-:::
 ::::
-
-::: footer
-[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
-:::
 
 
 ## {#taxonomy-01 data-menu-title="Taxonomy 01"}
 
 :::: {.columns .v-center-container}
-::: {.column width="30%"}
+::: {.column width="25%"}
 [Taxonomic <br> challenges]{.slide-title}
 Cleaning provided taxon names  
 :::
 
-::: {.column width="70%" .fragment}
+::: {.column width="75%" .fragment}
   
 ```{r}
 #| echo: true
+#| code-line-numbers: "|3-11|12-13|"
 
 clean_names <- function(name) {
   cleaned_name <- name |>
@@ -53,23 +48,21 @@ clean_names <- function(name) {
 ```
 :::
 ::::
-::: footer
-[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
-:::
 
 
 ## {#taxonomy-02 data-menu-title="Taxonomy 02"}
 
 :::: {.columns .v-center-container}
-::: {.column width="30%"}
+::: {.column width="25%"}
 [Taxonomic <br> challenges]{.slide-title}
 Alerting on different ranks
 :::
-::: {.column width="70%" .fragment}
+::: {.column width="75%" .fragment}
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "|1|8|17|"
 
 fields <- c("genus", "species", "subspecies", "scientificName")
 
@@ -94,22 +87,20 @@ request_data() |>
 
 :::
 ::::
-::: footer
-[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
-:::
 
 
 ## {#temporal data-menu-title="Temporal"}
 
 :::: {.columns .v-center-container}
-::: {.column width="30%"}
+::: {.column width="25%"}
 [Temporal <br> challenges]{.slide-title}
 :::
-::: {.column width="70%" .fragment}
+::: {.column width="75%" .fragment}
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "|2-3|4-5|"
 
 request_data() |>
   galah_filter(firstLoadedDate >= upload_date_start,
@@ -131,16 +122,65 @@ request_data() |>
 ```
 :::
 ::::
-::: footer
-[Slides](https://shandiya.quarto.pub/DataUseClub2024) | [Code](https://github.com/shandiya/DataUseClub2024)
-:::
+
 
 ## {#spatial data-menu-title="Spatial"}
-
 :::: {.columns .v-center-container}
-::: {.column width="30%"}
+::: {.column width="25%"}
 [Spatial <br> challenges]{.slide-title}
+:::
+::: {.column width="75%" .fragment}
+insert demo list here
 :::
 ::::
 
-## Slide(s) on broader learnings
+
+## {#modular-code-01 data-menu-title="Modular code 01"}
+
+:::: {.columns .v-center-container}
+::: {.column width="10%"}
+:::
+::: {.column width="40%"}
+[Broader <br> insights]{.slide-title}  
+Modular code 
+:::
+::: {.column width="50%"}
+-	Supports changing functionality
+-	Easy debugging
+-	Consistent & neutral code design 
+:::
+::::
+
+
+## {#modular-code-02 data-menu-title="Modular code 02"}
+
+:::: {.columns .v-center-container}
+::: {.column width="25%"}
+[Broader <br> insights]{.slide-title}  
+Modular code 
+:::
+::: {.column width="75%" .fragment}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|3-6|12|"
+
+occ_list <- species_records |>
+  filter(!is.na(decimalLatitude) & !is.na(decimalLongitude)) |>
+  identify_aus() |>
+  identify_state() |>
+  identify_shape(shapes_path = shapes_path) |>
+  identify_lga() |>
+  filter(state == "AUS" |
+      (!is.na(state) & flagged_state) |
+      (!is.na(lga) & flagged_lga) |
+      (!is.na(shape) & flagged_shape)) |>
+  select(-flagged_state,-flagged_lga,-flagged_shape) |>
+  exclude_records() |>
+  as_tibble()
+```
+:::
+::::
+
+  

@@ -130,7 +130,21 @@ request_data() |>
 [Spatial <br> challenges]{.slide-title}
 :::
 ::: {.column width="75%" .fragment}
-insert demo list here
+```{r}
+library(gt)
+
+readRDS("data/demo_list.rds") |> 
+  gt() |> 
+  opt_table_font(font = list(google_font("Lato"),
+                             default_fonts())) |>
+  opt_row_striping() |>
+  tab_options(row.striping.background_color = "#fffbf0",
+              table_body.hlines.color = "transparent",
+              column_labels.background.color = "#7E98A8",
+              table.font.size = 24,
+              data_row.padding = 2.4) |> 
+  as_raw_html()
+```
 :::
 ::::
 

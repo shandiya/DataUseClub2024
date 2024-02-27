@@ -33,7 +33,7 @@
 
 :::: {.columns .v-center-container}
 ::: {.column width="100%"}
-![](images/colonisation.png){width="1550"}
+![](images/colonisation.png){width="1600"}
 :::
 ::::
 

@@ -152,17 +152,17 @@ readRDS("data/demo_list.rds") |>
 ## {#modular-code-01 data-menu-title="Modular code 01"}
 
 :::: {.columns .v-center-container}
-::: {.column width="10%"}
-:::
-::: {.column width="40%"}
+::: {.column width="25%"}
 [Broader <br> insights]{.slide-title}  
 Modular code 
 :::
-::: {.column width="50%"}
+::: {.column width="75%"}
 -	Supports changing functionality
 -	Easy debugging
 -	Consistent & neutral code design 
 :::
+![](images/lego.png){.absolute bottom=20 right=0 width="350"}
+
 ::::
 
 
@@ -173,7 +173,7 @@ Modular code
 [Broader <br> insights]{.slide-title}  
 Modular code 
 :::
-::: {.column width="75%" .fragment}
+::: {.column width="75%"}
 
 ```{r}
 #| echo: true
@@ -197,4 +197,21 @@ occ_list <- species_records |>
 :::
 ::::
 
+
+## {#unit-testing data-menu-title="Unit testing"}
+
+:::: {.columns .v-center-container}
+::: {.column width="25%"}
+[Broader <br> insights]{.slide-title}  
+Unit tests 
+:::
+::: {.column width="75%"}
+-	point 1
+-	point 2
+-	point 3 even? 
+:::
+![](images/sooty-tern.png){.absolute bottom=30 right=0 width="350"}  
+[[Toby Hudson, CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Lord_Howe_Island_-_flying_Sooty_Tern_2.JPG)]{.caption .absolute bottom=0 right=35}
+
+::::
   

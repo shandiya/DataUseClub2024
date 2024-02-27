@@ -36,9 +36,32 @@
 :::
 
 
-## workflow slide
+## {#workflow data-menu-title="Workflow"}  
+[Workflow]{.h2-thin}  
 
-## From a list... {#demo-list data-menu-title="Demo list"}
+:::: {.columns .v-center-container}
+::: {.column width="25%" .fragment}
+[ 1]{.number}  
+Ingest &<br>process lists
+:::
+
+::: {.column width="25%" .fragment}
+[ 2]{.number}  
+Search for<br>occurrences
+:::
+::: {.column width="25%" .fragment}
+[ 3]{.number}  
+Filter & download<br>occurrences
+:::
+::: {.column width="25%" .fragment}
+[ 4]{.number}  
+Compile into a table<br>& send email
+:::
+::::
+
+
+## {#demo-list data-menu-title="Demo list"}
+[From a list...]{.h2-thin}
 
 ```{r}
 library(gt)

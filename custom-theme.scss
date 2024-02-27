@@ -80,6 +80,12 @@ $tabset-border-color: $body-color;
   font-family: 'Fjalla One', sans-serif;
 }
 
+.reveal .h2-thin {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 200;
+  font-size: 2em;
+}
+
 .reveal ul {
   font-family: 'League Spartan', sans-serif;
   font-weight: 200;
@@ -130,4 +136,11 @@ $tabset-border-color: $body-color;
   position: absolute;
   left: 20px;
   top: 300px;
+}
+
+.reveal .number {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 6em;
+  color: #7E98A8;
 }

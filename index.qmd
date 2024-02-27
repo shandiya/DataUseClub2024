@@ -67,12 +67,12 @@ m
 ::: {.column width="5%"}
 :::
 ::: {.column width="30%"}
-[Results <br> (12 months)]{.slide-title}
+[In 12<br> months...]{.slide-title}
 :::
 ::: {.column width="65%"}
 ::: {.incremental}
+- Manual running of scripts to automation via GitHub Actions   
 - From 2 lists & 2 users to 35 lists & 54 users 
-- Most users state/territory land management authorities  
 - Clearly demonstrated links to management and policy 
 :::
 :::

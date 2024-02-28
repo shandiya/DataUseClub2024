@@ -1,11 +1,11 @@
 ## The Atlas of Living Australia (ALA)
 
 :::: {.columns .v-center-container}
-::: {.column width="75%"}
-![](images/ala-home.png)
+::: {.column width="80%"}
+![](images/ala-front.png)
 :::
-::: {.column width="25%"} 
-[• One of several facilities funded by the Aus government for **national research infrastructure** <br><br> • Over 850 data providers & weekly ingest of datasets <br><br> • Citizen science is our fastest growing data source]{.ul-sml}
+::: {.column width="20%"} 
+[• One of several facilities funded by the Aus govt for **national research infrastructure** <br><br> • Over 850 data providers & weekly ingest of datasets <br><br> • Citizen science is our fastest growing data source]{.ul-sml}
 :::
 ::::
 

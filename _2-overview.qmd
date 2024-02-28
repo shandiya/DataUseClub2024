@@ -41,20 +41,20 @@
 
 :::: {.columns .v-center-container}
 ::: {.column width="25%" .fragment}
-[ 1]{.number}  
+[1]{.number}  
 Ingest &<br>process lists
 :::
 
 ::: {.column width="25%" .fragment}
-[ 2]{.number}  
+[2]{.number}  
 Search for<br>occurrences
 :::
 ::: {.column width="25%" .fragment}
-[ 3]{.number}  
+[3]{.number}  
 Filter & download<br>occurrences
 :::
 ::: {.column width="25%" .fragment}
-[ 4]{.number}  
+[4]{.number}  
 Compile into a table<br>& send email
 :::
 ::::
@@ -79,4 +79,8 @@ readRDS("data/demo_list.rds") |>
 ```
 
 
-## {#email-demo data-menu-title="Demo email" background-iframe="images/email_demo.html" background-interactive=true}
+## {#email-demo data-menu-title="Demo email"}
+
+[... to an email]{.h2-thin}  
+
+![](images/email_demo.png){fig-align="center"}  

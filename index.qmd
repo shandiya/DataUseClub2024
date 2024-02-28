@@ -69,7 +69,8 @@ m
 :::
 ::: {.column width="65%"}
 ::: {.incremental}
-- Manual running of scripts to automation via GitHub Actions   
+- Manual running of scripts to automation via GitHub Actions  
+- In the process of transitioning to core ALA systems  
 - From 2 lists & 2 users to 35 lists & 54 users 
 - Demonstrated links to management and policy 
 :::

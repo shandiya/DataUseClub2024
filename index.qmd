@@ -92,6 +92,6 @@ m
 ## {#final data-menu-title="Final"}  
 
 ![](images/people_5.png){.absolute top=60 width="1600"}    
-[Slides: [shandiya.quarto.pub/DataUseClub2024](https://shandiya.quarto.pub/datauseclub2024) <br> Code: [github.com/shandiya/DataUseClub2024](https://github.com/shandiya/DataUseClub2024)]{.absolute left=50 bottom=100}
+[Slides: [shandiya.quarto.pub/datauseclub2024](https://shandiya.quarto.pub/datauseclub2024) <br> Code: [github.com/shandiya/DataUseClub2024](https://github.com/shandiya/DataUseClub2024)]{.absolute left=50 bottom=100}
 
 ![](images/logos_final.png){.absolute bottom=50 right=100 width="400"}

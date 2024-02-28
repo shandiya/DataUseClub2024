@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: 7b9794b4-a352-4980-9d5b-06c68bb66ee4
+      url: 'https://shandiya.quarto.pub/datauseclub2024'

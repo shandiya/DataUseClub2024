@@ -206,9 +206,11 @@ occ_list <- species_records |>
 Unit tests 
 :::
 ::: {.column width="75%"}
--	point 1
--	point 2
--	point 3 even? 
+::: {.incremental}
+-	Continually updating biological dataset  
+-	Choosing the right test data  
+-	Informs workflow design    
+:::
 :::
 ![](images/sooty-tern.png){.absolute bottom=30 right=0 width="350"}  
 [[Toby Hudson, CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Lord_Howe_Island_-_flying_Sooty_Tern_2.JPG)]{.caption .absolute bottom=0 right=35}
